@@ -133,12 +133,12 @@ for o in order_list:
     # order_id
     p_order_id = o[0]
     df1.append(p_order_id)
-    print(p_order_id)
+    p_order_id
 
     # price
     p = PurchaseOrder.Parser.parse(o[1])
     df2.append(p.get_item_price())
-    print(p.get_item_price())
+    p.get_item_price()
 
 df['ID']= df1
 df['Price'] = df2
