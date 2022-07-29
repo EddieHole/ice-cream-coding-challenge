@@ -1,5 +1,7 @@
 # ice-cream-coding-challenge
 
+programming in ETL.py
+
 ## Original idea and design.
 ## 1. Extracts orders from the orders.csv file
 
