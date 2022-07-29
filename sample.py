@@ -4,7 +4,7 @@ order = pd.read_csv('orders.csv')
 pd.set_option('display.max_columns', None)
 ordercopy = order.copy(())
 print(ordercopy)
-# 提取订单信息
+
 order_list = ordercopy.values.tolist()
 order_id = ordercopy['ID'].values.tolist()
 order_orders = ordercopy['Order'].values.tolist()
@@ -12,7 +12,7 @@ order_orders = ordercopy['Order'].values.tolist()
 order_NumberCones = order_list.copy()
 print('*-----------------------11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111')
 # function 1
-def Number_Cones():  # 计算每个订单有几个冰淇淋，将总数加在data[2]
+def Number_Cones():  
     n = len(order_orders)
     for i in range(n):
         order_NumberCones[i].append(int(order_NumberCones[i][1][:1]))
@@ -29,7 +29,7 @@ print('*-----------------------3333333333333333333333333333333333333333333333333
 
 
 # function 2
-def Split_Flavor_Topping():  # 把订单信息中的flavor和topping 从 'with'分开
+def Split_Flavor_Topping(): 
     n = len(order_SplitFlavourTopping)
     for i in range(0, n):
         # split flavour and topping with 'with'
@@ -42,7 +42,7 @@ print(order_SplitFlavourTopping)
 
 
 # function 3
-def Count_Flavor():  # 计算每个订单的冰淇淋有几种flavor，计算其对应价格将总数加在data[3]
+def Count_Flavor():  
     n = len(order_SplitFlavourTopping)
     for x in range(n):
         a = order_SplitFlavourTopping[x][1][0]
@@ -67,7 +67,7 @@ print('*-----------------------4444444444444444444444444444444444444444444444444
 
 
 # function 4
-def Count_Topping():  # 计算每个订单的冰淇淋有几种topping，并将其价格加在data[4]
+def Count_Topping():  
     n = len(order_SplitFlavourTopping)
     for x in range(n):
         order_SplitFlavourTopping[x][1].insert(1, '0')
@@ -94,9 +94,9 @@ print(order_SplitFlavourTopping)
 
 
 # function 5
-# 计算每个订单的价格
 
-def PriceOrder(): # 计算每个订单的价格，将价格放在data[-1]
+
+def PriceOrder(): 
     n = len(order_SplitFlavourTopping)
     for i in range(n):
         df = pd.DataFrame()
@@ -126,13 +126,13 @@ print(order_SplitFlavourTopping)
 print(order_SplitFlavourTopping[0])
 
 # function 6
-# 提取表格最终格式
+
 df = pd.DataFrame(data=order_SplitFlavourTopping,columns=['ID','Price'])
 print(df)
 
 print('*-----------------------666666666666666666666666666666666666666664   6666666666666666666666666666666666666666666666')
 # function 7
-# 使用python 创建database，创建table
+
 
 import sqlite3
 con = sqlite3.connect(':memory:')
