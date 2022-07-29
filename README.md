@@ -25,3 +25,9 @@ Then count the number of times the flavor and topping appear in the order, respe
 ## 3.Store the purchase order ID and the computed price in a table in a database
 
 Answer: Use the SQLite library to create databases and tables.
+
+
+## Errors found after inspection:
+
+1. The same ID will have different orders. Orders with the same ID should be merged and then calculated.
+2. The save format of 'Price' stored in the table should retain two decimal places (de)
