@@ -1,11 +1,11 @@
 # ice-cream-coding-challenge
 
 ### Original idea and design.
-1. Extracts orders from the orders.csv file
+## 1. Extracts orders from the orders.csv file
 
 Answer: Use the values.tolist() function to extract the order information.
 
-2. Computes the price for Purchase orders of Ice-cream cones with toppings
+## 2. Computes the price for Purchase orders of Ice-cream cones with toppings
 
 Answer: when calculating the order price, there are three elements to pay attention to:
 1) The number of ice creams ordered.
@@ -20,3 +20,8 @@ The calculation formula of get_item_price is (the price corresponding to the num
 2. Observe the description of the order.
 There is the word 'with' between flavors and toppings, so take 'with' as the boundary to separate flavors and toppings.
 Then count the number of times the flavor and topping appear in the order, respectively.
+
+
+## 3.Store the purchase order ID and the computed price in a table in a database
+
+Answer: Use the SQLite library to create databases and tables.
