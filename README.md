@@ -30,4 +30,4 @@ Answer: Use the SQLite library to create databases and tables.
 ## Errors found after inspection:
 
 1. The same ID will have different orders. Orders with the same ID should be merged and then calculated.
-2. The save format of 'Price' stored in the table should retain two decimal places (de)
+2. The save format of 'Price' stored in the table should retain two decimal places.
